@@ -10,29 +10,25 @@ This repository is a **GitHub Pages-ready research website** for the AXEZENT gra
 
 The repository is already published at `https://github.com/shawncalvinsnelling/AXEZENT-NanoGap-Structural-Architecture`. After cloning or downloading the repository, run `python scripts/reassemble_assets.py` to reconstruct the original printed-cube photograph and calibration STL, verifying their SHA-256 values. Open `index.html` or run `python -m http.server 8000` for a local preview.
 
-## GitHub Pages — one-time setting
+## GitHub Pages — deployed via Actions
 
-1. Open this repository's **Settings → Pages**.
-2. Under **Build and deployment → Source**, select **GitHub Actions** (not “Deploy from a branch”).
-3. Open **Actions → Publish AXEZENT research website**. The workflow reconstructs the exact source assets, verifies the files, runs five tests, and deploys GitHub Pages automatically on every push to `main`.
-4. After deployment succeeds, use the **Visit site** link in Pages settings to confirm the live address.
+GitHub Actions completed the build **and Pages deployment** successfully on November 11, 2026 (US Central time). The repository is already created and uploaded; no re-upload is required. The [Publish AXEZENT research website](https://github.com/shawncalvinsnelling/AXEZENT-NanoGap-Structural-Architecture/actions/workflows/pages.yml) workflow reconstructs source assets, verifies hashes, runs the tests, and deploys automatically after pushes to `main`.
 
-The expected URL is `https://shawncalvinsnelling.github.io/AXEZENT-NanoGap-Structural-Architecture/`; it should not be treated as live until deployment succeeds.
+1. Open [Settings → Pages](https://github.com/shawncalvinsnelling/AXEZENT-NanoGap-Structural-Architecture/settings/pages) and keep **Build and deployment → Source = GitHub Actions**.
+2. Use **Visit site** there to confirm the public address and visually inspect galleries, downloads and mathematical controls.
+3. If a future workflow fails, inspect its Actions logs and rerun after fixing the cause.
 
-### Alternative using Git CLI (Windows PowerShell)
+The site address reported by GitHub Pages should be `https://shawncalvinsnelling.github.io/AXEZENT-NanoGap-Structural-Architecture/`. A successful deployment is confirmed in Actions; a separate browser visual check is recommended.
+
+### Local reproduction and validation
 
 ```powershell
-# After the empty repository is created on GitHub:
-cd "C:\path\to\AXEZENT-NanoGap-Structural-Architecture"
-git init
-git branch -M main
-git add .
-git commit -m "feat: publish AXEZENT NanoGap architecture research website"
-git remote add origin https://github.com/shawncalvinsnelling/AXEZENT-NanoGap-Structural-Architecture.git
-git push -u origin main
+python scripts/reassemble_assets.py
+python -m unittest discover -s tests -v
+python -m http.server 8000
 ```
 
-This setup needs no paid host, no Vercel/Netlify, no Node build, and no external JS framework. The public site runs on static HTML, CSS and browser JavaScript; GitHub Actions reconstructs the large source assets before deployment.
+The mathematics and an independent regression suite are described in [NanoGap mathematical verification](docs/NANOGAP_MATHEMATICAL_AUDIT.md). The site runs on static HTML, CSS, browser JavaScript and GitHub Actions; no additional hosting provider is required.
 
 ## Structure
 
@@ -52,11 +48,11 @@ See `CITATION.cff` and https://doi.org/10.1038/s41586-026-11191-2 for the separa
 
 ## Public release / copyright
 
-See `docs/RIGHTS_AND_USE.md` before uploading: a public website and source directory disclose the visible equations and model files. No open-source license is implied by default.
+Read `docs/RIGHTS_AND_USE.md`: this repository is already public and discloses the generator, equations, and selected model files. That can affect patent or trade-secret strategies; all-rights-reserved language does not undo the disclosure. No open-source license is implied by default.
 
-### Optional Windows publishing helper
+### Maintenance
 
-After creating the empty GitHub repository, run `PUBLISH_TO_GITHUB_WINDOWS.bat` from the extracted folder if you have Git for Windows installed. It explicitly asks you to type `PUBLISH` before uploading any contents. GitHub authentication must already be configured.
+The repository is already populated. Use ordinary Git commits or the GitHub web editor for future changes. Preserve all original v1.0 design files and the documented limitations when adding new proposed variants.
 
 
 ## Binary asset fidelity and automated publishing
