@@ -1,0 +1,122 @@
+{
+  "design": {
+    "name": "AXZ_Dr_Shawn_Quantum_Cube_v1_0",
+    "side_mm": 63.5,
+    "voxel_mm": 0.95,
+    "frame_mm": 3.8,
+    "pitch_core_mm": 14.0,
+    "pitch_shell_mm": 8.0,
+    "pitch_exponent": 1.35,
+    "tau_core": 0.27,
+    "tau_shell": 0.48,
+    "thickness_exponent": 1.6,
+    "triangle_vertex_fraction": 0.72,
+    "triangle_strut_radius_mm": 1.65,
+    "center_node_radius_mm": 3.5,
+    "nano_alpha_per_mm": 0.22,
+    "nano_tau_boost": 0.08,
+    "component_min_area_mm2": 20.0,
+    "padding_mm": 1.5
+  },
+  "equations": {
+    "cube_radius": "r=max(|x|,|y|,|z|)/(L/2)",
+    "pitch": "P(r)=P_shell+(P_core-P_shell)*(1-r^p)",
+    "thickness": "tau(r)=tau_core+(tau_shell-tau_core)*r^q",
+    "gyroid": "G=sin(kx)cos(ky)+sin(ky)cos(kz)+sin(kz)cos(kx), k=2*pi/P(r)",
+    "nano_coupling": "K(d)=exp(-alpha*d); tau_eff=tau+nano_boost*K(d)",
+    "solid_rule": "|G|<=tau_eff, union Triangle-Axe spine and 12-edge frame"
+  },
+  "zones_normalized": [
+    {
+      "zone": 1,
+      "r_min": 0.0,
+      "r_max": 0.2,
+      "gap_weight": 1.0
+    },
+    {
+      "zone": 2,
+      "r_min": 0.2,
+      "r_max": 0.4,
+      "gap_weight": 0.75
+    },
+    {
+      "zone": 3,
+      "r_min": 0.4,
+      "r_max": 0.6,
+      "gap_weight": 0.5
+    },
+    {
+      "zone": 4,
+      "r_min": 0.6,
+      "r_max": 0.8,
+      "gap_weight": 0.35
+    },
+    {
+      "zone": 5,
+      "r_min": 0.8,
+      "r_max": 0.95,
+      "gap_weight": 0.25
+    },
+    {
+      "zone": 6,
+      "r_min": 0.95,
+      "r_max": 1.0,
+      "role": "reinforced shell/frame"
+    }
+  ],
+  "outputs": {
+    "FULL_ONE_PIECE": {
+      "filename": "AXZ_Dr_Shawn_Quantum_Cube_v1_0_FULL_ONE_PIECE_63.5mm.stl",
+      "watertight": true,
+      "vertices": 310227,
+      "triangles": 672786,
+      "extents_mm": [
+        63.500051498413086,
+        63.500051498413086,
+        63.500051498413086
+      ],
+      "volume_mm3": 59222.399462018824,
+      "surface_area_mm2": 192048.2467583267
+    },
+    "LATTICE_CORE": {
+      "filename": "AXZ_Dr_Shawn_Quantum_Cube_v1_0_LATTICE_CORE_63.5mm.stl",
+      "watertight": true,
+      "vertices": 316761,
+      "triangles": 687790,
+      "extents_mm": [
+        63.500051498413086,
+        63.500051498413086,
+        63.500051498413086
+      ],
+      "volume_mm3": 51040.37971736337,
+      "surface_area_mm2": 193546.06149163508
+    },
+    "OUTER_FRAME": {
+      "filename": "AXZ_Dr_Shawn_Quantum_Cube_v1_0_OUTER_FRAME_63.5mm.stl",
+      "watertight": true,
+      "vertices": 11712,
+      "triangles": 23440,
+      "extents_mm": [
+        63.500051498413086,
+        63.500051498413086,
+        63.500051498413086
+      ],
+      "volume_mm3": 9756.036631632798,
+      "surface_area_mm2": 9701.408427067558
+    },
+    "MASTER_HIGH_RES_FULL_ONE_PIECE": {
+      "filename": "AXZ_Dr_Shawn_Quantum_Cube_v1_0_MASTER_HIGH_RES_FULL_ONE_PIECE_63.5mm.stl",
+      "sampling_voxel_mm": 0.6,
+      "watertight": true,
+      "vertices": 828657,
+      "triangles": 1696350,
+      "extents_mm": [
+        63.499900817871094,
+        63.499900817871094,
+        63.499900817871094
+      ],
+      "volume_mm3": 73683.13769201055,
+      "surface_area_mm2": 202927.49734827323
+    }
+  }
+}

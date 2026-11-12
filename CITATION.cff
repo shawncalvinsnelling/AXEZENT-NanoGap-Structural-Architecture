@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this research site and associated version when referring to the AXEZENT NanoGap cube geometry."
+title: "AXEZENT NanoGap Structural Architecture: Graded Gyroid Cube v1.0"
+type: software
+authors:
+  - family-names: Snelling
+    given-names: Shawn Calvin
+version: "1.0.0"
+date-released: "2026-11-11"
+abstract: "Documented gyroid cube model and NanoGap reinforcement geometry, with computational source, specimen files and an independent verification roadmap; mechanical performance unverified."

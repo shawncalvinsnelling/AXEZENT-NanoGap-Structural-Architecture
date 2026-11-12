@@ -61,3 +61,12 @@ See `docs/RIGHTS_AND_USE.md` before uploading: a public website and source direc
 ### Optional Windows publishing helper
 
 After creating the empty GitHub repository, run `PUBLISH_TO_GITHUB_WINDOWS.bat` from the extracted folder if you have Git for Windows installed. It explicitly asks you to type `PUBLISH` before uploading any contents. GitHub authentication must already be configured.
+
+
+## Binary asset fidelity and automated publishing
+
+The full-size **original 38.1 mm calibration STL** and **full-resolution printed-cube photograph** are preserved *losslessly* as chunks in `data/asset-parts/` to make the initial GitHub transfer reliable. This is not a change to the original geometry. `scripts/reassemble_assets.py` combines the chunks, verifies their original SHA-256 hashes, and writes the exact files to the documented asset paths. The Actions build runs this step before validation and deployment. Run the same script locally after cloning to obtain all original research-site assets.
+
+For GitHub Pages, open **Settings → Pages**, choose **GitHub Actions** under **Build and deployment → Source**, and the `Publish AXEZENT research website` workflow will deploy the entire validated site. Do not select “Deploy from a branch” for this version; it would not reconstruct the original calibration STL and photo from the checked-in parts.
+
+This repository intentionally does **not** contain the separate 84.8 MB high-resolution master STL, which was shared privately with the corresponding research authors. All five models are also available in the original complete research package, not all as individual public website downloads.

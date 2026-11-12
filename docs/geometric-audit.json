@@ -1,0 +1,55 @@
+{
+  "source_file": "AXZ_Dr_Shawn_Quantum_Cube_v1_0_MASTER_HIGH_RES_FULL_ONE_PIECE_63.5mm.stl",
+  "stl_file_bytes": 84817584,
+  "triangles": 1696350,
+  "bounds_min_mm": [
+    -31.75,
+    -31.75,
+    -31.75
+  ],
+  "bounds_max_mm": [
+    31.749900817871094,
+    31.749900817871094,
+    31.749900817871094
+  ],
+  "signed_volume_mm3": 73683.13769201057,
+  "solid_volume_mm3": 73683.13769201057,
+  "surface_area_mm2": 202927.49734827323,
+  "cube_envelope_volume_mm3": 256047.875,
+  "solid_volume_fraction": 0.28777094007130727,
+  "surface_to_volume_inv_mm": 2.754056134206627,
+  "phase_audit": [
+    {
+      "r": 0,
+      "intended_pitch_mm": 14.0,
+      "actual_local_phase_period_axis_dominant_mm": 14.0
+    },
+    {
+      "r": 0.25,
+      "intended_pitch_mm": 13.076641689991312,
+      "actual_local_phase_period_axis_dominant_mm": 11.938592736000741
+    },
+    {
+      "r": 0.5,
+      "intended_pitch_mm": 11.646247706309747,
+      "actual_local_phase_period_axis_dominant_mm": 9.149810704320092
+    },
+    {
+      "r": 0.75,
+      "intended_pitch_mm": 9.931034983489718,
+      "actual_local_phase_period_axis_dominant_mm": 6.39422815102562
+    },
+    {
+      "r": 0.95,
+      "intended_pitch_mm": 8.401417045925278,
+      "actual_local_phase_period_axis_dominant_mm": 4.4226818220365285
+    },
+    {
+      "r": 1.0,
+      "intended_pitch_mm": 8.0,
+      "actual_local_phase_period_axis_dominant_mm": 3.975155279503105
+    }
+  ],
+  "status": "GEOMETRY_ONLY_NOT_A_STRENGTH_TEST",
+  "required_next": "mesh convergence; fixed-material matched-density FEA; controlled compression and impact tests; defect-robustness tests"
+}

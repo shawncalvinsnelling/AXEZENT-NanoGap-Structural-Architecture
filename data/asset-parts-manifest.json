@@ -1,0 +1,30 @@
+{
+  "assets/images/printed-cube-original.png": {
+    "compression": "raw",
+    "source_sha256": "57b1286f976faf7321fb49631581df3f449a695b2c551b50b2bfed9deb385ddc",
+    "source_size": 3483517,
+    "stored_size": 3483517,
+    "parts": [
+      "data/asset-parts/printed-cube-original.png.part000.bin",
+      "data/asset-parts/printed-cube-original.png.part001.bin",
+      "data/asset-parts/printed-cube-original.png.part002.bin",
+      "data/asset-parts/printed-cube-original.png.part003.bin",
+      "data/asset-parts/printed-cube-original.png.part004.bin"
+    ]
+  },
+  "assets/models/AXEZENT_Quantum_Cube_v1_Calibration_38p1mm.stl": {
+    "compression": "gzip",
+    "source_sha256": "827fcc9b60ba70a3440cb4e170f6860302c5d71986e5c9ea8cb5dcbbab17b56b",
+    "source_size": 12865084,
+    "stored_size": 5517317,
+    "parts": [
+      "data/asset-parts/AXEZENT_Quantum_Cube_v1_Calibration_38p1mm.stl.part000.bin",
+      "data/asset-parts/AXEZENT_Quantum_Cube_v1_Calibration_38p1mm.stl.part001.bin",
+      "data/asset-parts/AXEZENT_Quantum_Cube_v1_Calibration_38p1mm.stl.part002.bin",
+      "data/asset-parts/AXEZENT_Quantum_Cube_v1_Calibration_38p1mm.stl.part003.bin",
+      "data/asset-parts/AXEZENT_Quantum_Cube_v1_Calibration_38p1mm.stl.part004.bin",
+      "data/asset-parts/AXEZENT_Quantum_Cube_v1_Calibration_38p1mm.stl.part005.bin",
+      "data/asset-parts/AXEZENT_Quantum_Cube_v1_Calibration_38p1mm.stl.part006.bin"
+    ]
+  }
+}
