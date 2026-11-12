@@ -8,20 +8,16 @@ This repository is a **GitHub Pages-ready research website** for the AXEZENT gra
 
 ## Quick start
 
-For Windows users: download the repository ZIP, **extract it**, open `index.html` to preview the visual site locally; note some browsers restrict local downloads when using file://. For full local testing, run `python -m http.server 8000` inside the extracted folder and open http://localhost:8000/ .
+The repository is already published at `https://github.com/shawncalvinsnelling/AXEZENT-NanoGap-Structural-Architecture`. After cloning or downloading the repository, run `python scripts/reassemble_assets.py` to reconstruct the original printed-cube photograph and calibration STL, verifying their SHA-256 values. Open `index.html` or run `python -m http.server 8000` for a local preview.
 
-## GitHub Pages installation — exact order
+## GitHub Pages — one-time setting
 
-1. Sign into GitHub as **`shawncalvinsnelling`**.
-2. Create a **new PUBLIC repository** named `AXEZENT-NanoGap-Structural-Architecture`; set the description to `Independent architected-materials research: graded gyroid geometry, NanoGap coupling, STL prototypes, mathematics and validation — Shawn Calvin Snelling.` If uploading this complete folder through the browser, **do not add a template README** at creation.
-3. Download and **extract** the supplied site ZIP. Do **not** upload the ZIP as one single file: that will not create a website.
-4. Inside the new repository select **Add file → Upload files**. Drag **the contents** of the extracted `AXEZENT-NanoGap-Structural-Architecture` folder into the upload area so `index.html` is at the repository root. Preserve directory structure. Each included file fits GitHub's 25 MiB browser upload limit.
-5. Commit to `main` with the message `feat: publish AXEZENT NanoGap architecture research website`.
-6. Open **Settings → Pages → Build and deployment**. Select `Deploy from a branch`, `main`, and `/(root)`, then click **Save**.
-7. After the Pages deployment completes, open **Settings → Pages → Visit site** and check navigation, downloads, photographs, mobile layout and mathematical explorer.
-8. Once the site is live, copy the **actual Pages URL from Settings** to a follow-up email to the researchers.
+1. Open this repository's **Settings → Pages**.
+2. Under **Build and deployment → Source**, select **GitHub Actions** (not “Deploy from a branch”).
+3. Open **Actions → Publish AXEZENT research website**. The workflow reconstructs the exact source assets, verifies the files, runs five tests, and deploys GitHub Pages automatically on every push to `main`.
+4. After deployment succeeds, use the **Visit site** link in Pages settings to confirm the live address.
 
-**Expected URL format after successful publishing:** `https://shawncalvinsnelling.github.io/AXEZENT-NanoGap-Structural-Architecture/` (not live until GitHub actually publishes it).
+The expected URL is `https://shawncalvinsnelling.github.io/AXEZENT-NanoGap-Structural-Architecture/`; it should not be treated as live until deployment succeeds.
 
 ### Alternative using Git CLI (Windows PowerShell)
 
@@ -36,13 +32,13 @@ git remote add origin https://github.com/shawncalvinsnelling/AXEZENT-NanoGap-Str
 git push -u origin main
 ```
 
-This setup needs no paid host, no Vercel/Netlify, no Node build, and no external JS framework. The site runs on static HTML, CSS and browser JavaScript only.
+This setup needs no paid host, no Vercel/Netlify, no Node build, and no external JS framework. The public site runs on static HTML, CSS and browser JavaScript; GitHub Actions reconstructs the large source assets before deployment.
 
 ## Structure
 
 - `index.html` — complete research website
 - `assets/images/` — CAD render, actual physical sample photograph and explanatory diagram
-- `assets/models/` — calibration STL and outer-frame STL suitable for GitHub browser upload
+- `assets/models/` — original outer-frame STL; exact calibration STL rebuilt from the verified parts
 - `source/` — original Python generator and historical design manifest
 - `docs/` — validation record, laboratory study protocol, provenance and research rights
 - `assets/documents/` — technical PDF supplied in the MIT research correspondence
