@@ -1,25 +1,33 @@
-# Exact GitHub setup order
+# GitHub Pages — current repository setup
 
-This site uses **GitHub Pages ONLY**. No other web hosting services are required. Repository target: `shawncalvinsnelling/AXEZENT-NanoGap-Structural-Architecture`.
+**Research author:** Shawn Calvin Snelling
 
-1. Go to https://github.com/new while logged into `shawncalvinsnelling`.
-2. Owner: `shawncalvinsnelling`.
-3. Repository name: `AXEZENT-NanoGap-Structural-Architecture`.
-4. Description: `AXEZENT architected metamaterial research — graded gyroid cube, NanoGap geometry, STL, mathematics, and validation | Shawn Calvin Snelling`.
-5. Visibility: **Public** (required for a broadly accessible research site on free GitHub Pages).
-6. Do not initialize with a GitHub README, license, or gitignore (the folder has these or deliberately does not include a license).
-7. Choose **Create repository**.
-8. On the empty repo, choose **uploading an existing file**, or **Add file → Upload files**.
-9. On your computer, unzip the provided **SITE GITHUB ZIP**. Open the extracted folder and select its **contents** (not the enclosing directory or ZIP) for upload. Folder drag-and-drop works in the GitHub browser uploader; preserve subfolders, including `.nojekyll`. The packaged individual files are all below GitHub's 25 MiB browser limit.
-10. Commit onto **main**.
-11. Go to **Settings → Pages**.
-12. Under **Build and deployment**, choose **Deploy from a branch**.
-13. Select **main** and **/(root)**; click **Save**.
-14. Once GitHub reports deployment success, click **Visit site**. Check images, mathematical sliders, gallery, STL links, research PDF, and mobile navigation.
-15. In the GitHub repository About panel set the website field to the **actual URL displayed by Pages**; only then email that link to the researchers.
+**Repository:** https://github.com/shawncalvinsnelling/AXEZENT-NanoGap-Structural-Architecture
 
-**Important:** The public repo exposes the original Python generator, equations, some STL models and a sample photograph; do not publish files you wish to keep confidential. The high-resolution 84.8 MB master is intentionally omitted from the public repo but was separately shared with the researchers.
+The complete website source is committed to the repository's `main` branch. You do **not** need to create or upload the repository again.
 
-For browser upload, GitHub limits each individual file to 25 MiB. The ZIP file itself is **not** uploaded to GitHub as the website; its unzipped content is uploaded. For larger files, GitHub recommends Git command-line uploads (up to its 100 MiB Git hard limit) or Git LFS.
+## One-time GitHub Pages activation
 
-Troubleshooting: if the site shows README text rather than the styled website, confirm `index.html` is at repository root and Pages source is main/root; if images fail, check that paths retain the exact case and directories; if zip downloads fail, check browser file links after upload.
+1. Open the repository and select **Settings**.
+2. Open **Pages** in the left-hand sidebar.
+3. Under **Build and deployment → Source**, select **GitHub Actions**.
+4. Open **Actions → Publish AXEZENT research website**, and rerun the workflow if the earlier run failed. New commits to `main` also trigger it automatically.
+5. Once deployment reports success, use **Settings → Pages → Visit site**. Check the mathematical explorer, the physical print and CAD photographs, downloadable STL files, PDF, and mobile layout.
+
+Expected published URL: `https://shawncalvinsnelling.github.io/AXEZENT-NanoGap-Structural-Architecture/` (verify GitHub reports successful deployment before sharing).
+
+## Why Actions instead of branch mode?
+
+The original 38.1 mm calibration STL and full-resolution source photograph are stored losslessly as parts in `data/asset-parts/`. The workflow invokes `python scripts/reassemble_assets.py`, validates their SHA-256 hashes against the manifest, runs five repository checks, and generates the full static Pages artifact. Branch mode would not reassemble these assets.
+
+To preview locally after cloning:
+
+```powershell
+python scripts/reassemble_assets.py
+python -m unittest discover -s tests -v
+python -m http.server 8000
+```
+
+Then visit `http://localhost:8000/`.
+
+The original 84.8 MB high-resolution master cube STL was not made public in this repository; it was supplied directly to the research team. Public source is attributed to Shawn Calvin Snelling. Research performance remains unverified.
