@@ -1,14 +1,18 @@
-AXEZENT NanoGap — GitHub Pages setup
+AXEZENT NanoGap — published repository and Pages enablement
 
 Research author: Shawn Calvin Snelling
-Repository: AXEZENT-NanoGap-Structural-Architecture
+Repository: https://github.com/shawncalvinsnelling/AXEZENT-NanoGap-Structural-Architecture
 
-1. Extract this ZIP.
-2. Create a PUBLIC empty repository with the exact name above on GitHub.
-3. Upload all files/folders inside the extracted site folder. Do not upload only the ZIP.
-4. Confirm index.html is at repository root on main.
-5. Settings > Pages > Deploy from a branch > main > /(root) > Save.
-6. Verify the published website and send its ACTUAL URL to the researchers.
+The project files are already on main. Do not upload the old ZIP again.
 
-The original high-res master STL is already shared directly with the researchers; not mirrored on the public site.
-Full details: docs/GITHUB_PAGES_SETUP.md
+ONE REQUIRED SETTING:
+1. Open the repository on GitHub.
+2. Choose Settings > Pages.
+3. Under Build and deployment > Source select GitHub Actions.
+4. Open the Actions tab, select Publish AXEZENT research website, and rerun the failed workflow if it does not automatically retry.
+5. Wait for the deployment to show success; then use the Visit site link under Settings > Pages.
+
+The workflow reconstructs the exact full-resolution photo and the original 38.1 mm calibration STL from lossless parts, verifies SHA256, runs the tests, and publishes the website.
+
+All visible research is credited to Shawn Calvin Snelling.
+The 84.8 MB high-resolution master STL remains outside this public website repository and was separately shared directly with the corresponding researchers.
