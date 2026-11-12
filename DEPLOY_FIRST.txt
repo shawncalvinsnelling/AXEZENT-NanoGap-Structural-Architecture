@@ -1,18 +1,18 @@
-AXEZENT NanoGap — published repository and Pages enablement
+AXEZENT NanoGap — current GitHub Pages status
 
 Research author: Shawn Calvin Snelling
 Repository: https://github.com/shawncalvinsnelling/AXEZENT-NanoGap-Structural-Architecture
+Website to check: https://shawncalvinsnelling.github.io/AXEZENT-NanoGap-Structural-Architecture/
 
-The project files are already on main. Do not upload the old ZIP again.
+STATUS (November 11, 2026, US Central time):
+The repository was uploaded to main. GitHub Actions reported a SUCCESSFUL Pages deployment.
 
-ONE REQUIRED SETTING:
-1. Open the repository on GitHub.
-2. Choose Settings > Pages.
-3. Under Build and deployment > Source select GitHub Actions.
-4. Open the Actions tab, select Publish AXEZENT research website, and rerun the failed workflow if it does not automatically retry.
-5. Wait for the deployment to show success; then use the Visit site link under Settings > Pages.
+Do not recreate the repository or re-upload the old ZIP.
+GitHub Pages must use Actions as its source, not branch deployment:
+https://github.com/shawncalvinsnelling/AXEZENT-NanoGap-Structural-Architecture/settings/pages
 
-The workflow reconstructs the exact full-resolution photo and the original 38.1 mm calibration STL from lossless parts, verifies SHA256, runs the tests, and publishes the website.
+Check the published page, mathematics explorer, images and specimen downloads.
+Full instructions: docs/GITHUB_PAGES_SETUP.md
+Math verification: docs/NANOGAP_MATHEMATICAL_AUDIT.md
 
-All visible research is credited to Shawn Calvin Snelling.
-The 84.8 MB high-resolution master STL remains outside this public website repository and was separately shared directly with the corresponding researchers.
+The public repository includes source mathematics and selected models. The original 84.8 MB high-resolution master STL remains outside this repository. Mechanical superiority is not established.
