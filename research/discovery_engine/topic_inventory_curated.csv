@@ -1,0 +1,27 @@
+topic,domain,provenance
+geometry,mathematics,curated from project
+fracture mechanics,engineering,curated from project
+additive manufacturing,engineering,curated from project
+photonics,physics,curated from project
+nanotechnology,materials,curated from project
+measurement science,metrology,curated from project
+statistics,mathematics,curated from project
+signal processing,engineering,curated from project
+Bayesian inference,mathematics,curated from project
+material science,materials,curated from project
+embedded sensors,engineering,curated from project
+integer mathematics,mathematics,curated from project
+sparse algorithms,computing,curated from project
+structural topology,mathematics,curated from project
+gyroid lattices,materials,curated from project
+finite element analysis,engineering,curated from project
+quantum optics,physics,curated from project
+molecular dynamics,chemistry,curated from project
+genetics,biology,curated from project
+cybersecurity,computing,curated from project
+machine learning,computing,curated from project
+computational music,creative computing,curated from project
+psychoacoustics,acoustics,curated from project
+vibration analysis,mechanical engineering,curated from project
+biophysics,physics and biology,curated from project
+robotics,engineering,curated from project
